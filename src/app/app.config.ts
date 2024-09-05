@@ -5,7 +5,7 @@ import { routes } from './app.routes';
 import { loadTranslations } from '@angular/localize';
 import { registerLocaleData } from '@angular/common';
 
-import bg from '@angular/common/locales/bg';
+import bgLocale from '@angular/common/locales/bg';
 import bgTranslations from '../../public/locale/messages.bg.json';
 
 const locale = localStorage.getItem('locale') || 'en';
@@ -46,7 +46,7 @@ function getLocaleConfig(locale: string) {
       return {
         code: 'bg',
         translations: bgTranslations.translations,
-        locale: bg,
+        locale: bgLocale,
       };
     default:
       return null;
