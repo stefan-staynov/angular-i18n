@@ -1,6 +1,10 @@
 {
   "locale": "en-US",
   "translations": {
+    "formFieldName": "Name",
+    "formFieldPrice": "Price",
+    "formSave": "Save",
+    "formData": "Form Data",
     "language": "Language: ",
     "siteTitle": "Welcome!",
     "siteDescription": "This is my page which is localized.",
@@ -9,6 +13,7 @@
     "itemCount": "{VAR_PLURAL, plural, =0 {No items} =1 {One item} other {{INTERPOLATION} items}}",
     "itemCountClear": "Increment",
     "itemCountIncrement": "Clear",
+    "formTitle": "This is a form",
     "customMessage": "This is a message coming from the component itself!"
   }
 }

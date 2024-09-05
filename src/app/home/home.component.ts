@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { FormComponent } from "../form/form.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FormComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

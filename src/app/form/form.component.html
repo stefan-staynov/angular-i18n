@@ -1,0 +1,19 @@
+<h2>{{ title }}</h2>
+
+<form [formGroup]="form" (submit)="save()">
+  <p>
+    <label for="name" i18n="@@formFieldName">Name</label><br />
+    <input formControlName="name" type="text" id="name" />
+  </p>
+  <p>
+    <label for="prive" i18n="@@formFieldPrice">Price</label><br />
+    <input formControlName="price" type="number" id="price" min="0" max="10000" />
+  </p>
+  <button type="submit" [disabled]="form.invalid" i18n="@@formSave">Save</button>
+</form>
+
+@if (formData) { 
+    <h3 i18n="@@formData">Form Data</h3>
+    <p><strong i18n="@@formFieldName">Name</strong>: {{formData.name}}</p>
+    <p><strong i18n="@@formFieldPrice">Price</strong>: {{formData.price | number}}</p>
+}

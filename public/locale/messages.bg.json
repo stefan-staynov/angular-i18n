@@ -1,6 +1,10 @@
 {
   "locale": "bg-BG",
   "translations": {
+    "formFieldName": "Име",
+    "formFieldPrice": "Цена",
+    "formSave": "Запиши",
+    "formData": "Данни на формата",
     "language": "Език: ",
     "siteTitle": "Добре дошли!",
     "siteDescription": "Това е локализирана страница.",
@@ -9,6 +13,7 @@
     "itemCount": "{VAR_PLURAL, plural, =0 {Няма елементи} =1 {Един елемент} other {{INTERPOLATION} елемента}}",
     "itemCountClear": "Добави елемент",
     "itemCountIncrement": "Изчисти",
+    "formTitle": "Заглавие на форма",
     "customMessage": "Това съобщение идва от компонента!"
   }
 }
