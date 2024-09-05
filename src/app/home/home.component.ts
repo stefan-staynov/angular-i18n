@@ -11,6 +11,11 @@ import { Component } from '@angular/core';
 export class HomeComponent {
 
   today = new Date();
-  message = $localize`This is a message coming from the component itself!`;
+  message = $localize`:@@customMessage:This is a message coming from the component itself!`;
+
+  changeLanguage(locale: string): void {
+    localStorage.setItem('locale', locale);
+    window.location.reload();
+  }
 
 }

@@ -1,0 +1,10 @@
+{
+  "locale": "bg-BG",
+  "translations": {
+    "siteTitle": "Добре дошли!",
+    "siteDescription": "Това е локализирана страница.",
+    "todayDate": "Днес е {$INTERPOLATION}",
+    "logoAlt": "Това е моето лого",
+    "customMessage": "Това съобщение идва от компонента!"
+  }
+}

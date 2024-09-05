@@ -4,6 +4,14 @@
   "newProjectRoot": "projects",
   "projects": {
     "ng-localization": {
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "bg": {
+            "translation": "public/locale/messages.bg.json"
+          }
+        }
+      },
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {

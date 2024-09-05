@@ -1,0 +1,10 @@
+{
+  "locale": "en-US",
+  "translations": {
+    "siteTitle": "Welcome!",
+    "siteDescription": "This is my page which is localized.",
+    "todayDate": "Today is {$INTERPOLATION}.",
+    "logoAlt": "My site's logo",
+    "customMessage": "This is a message coming from the component itself!"
+  }
+}

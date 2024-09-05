@@ -1,7 +1,15 @@
-<h1 i18n>Welcome!</h1>
+<div>
+    <span i18n="@@language">Language: </span>
+    <a (click)="changeLanguage('en')">English</a> | 
+    <a (click)="changeLanguage('bg')">Български</a>
+</div>
 
-<p i18n>This is my page which is localized.</p>
+<h1 i18n="@@siteTitle">Welcome!</h1>
 
-<p i18n>Today is {{today | date}}.</p>
+<p i18n="@@siteDescription">This is my page which is localized.</p>
+
+<p i18n="@@todayDate">Today is {{today | date}}</p>
 
 <p>{{message}}</p>
+
+<img src="assets/logo.svg" i18n-alt="@@logoAlt" alt="My site's logo">
