@@ -5,6 +5,9 @@ import { routes } from './app.routes';
 import { loadTranslations } from '@angular/localize';
 import { registerLocaleData } from '@angular/common';
 
+import bg from '@angular/common/locales/bg';
+import bgTranslations from '../../public/locale/messages.bg.json';
+
 const locale = localStorage.getItem('locale') || 'en';
 
 export const appConfig: ApplicationConfig = {
@@ -23,9 +26,9 @@ export const appConfig: ApplicationConfig = {
   ]
 };
 
-function initializeAppFactory(): () => Promise<void> {
-  return async () => {
-    const localConfig = await getLocaleConfig(locale);
+function initializeAppFactory() {
+  return () => {
+    const localConfig = getLocaleConfig(locale);
 
     if (!localConfig) {
       return;
@@ -34,16 +37,16 @@ function initializeAppFactory(): () => Promise<void> {
     loadTranslations(localConfig.translations);
     $localize.locale = locale;
     registerLocaleData(localConfig.locale);
-  }
+  };
 }
 
-async function getLocaleConfig(locale: string) {
+function getLocaleConfig(locale: string) {
   switch (locale) {
     case 'bg':
       return {
         code: 'bg',
-        translations: (await import('../../public/locale/messages.bg.json')).translations,
-        locale: (await import('../../node_modules/@angular/common/locales/bg')).default,
+        translations: bgTranslations.translations,
+        locale: bg,
       };
     default:
       return null;
