@@ -12,4 +12,14 @@
 
 <p>{{message}}</p>
 
-<img src="assets/logo.svg" i18n-alt="@@logoAlt" alt="My site's logo">
+<p>
+    <img src="assets/logo.svg" i18n-alt="@@logoAlt" alt="My site's logo">
+</p>
+
+<p>
+    <span i18n="@@itemCount">{itemCount, plural, =0 {No items} =1 {One item} other {{{itemCount}} items}}</span>
+</p>
+<p>
+    <button type="button" (click)="incrementItemCount()" i18n="@@itemCountClear">Increment</button>
+    <button type="button" (click)="clearItemCount()" i18n="@@itemCountIncrement">Clear</button>
+</p>

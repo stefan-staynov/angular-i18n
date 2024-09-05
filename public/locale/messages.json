@@ -1,10 +1,14 @@
 {
   "locale": "en-US",
   "translations": {
+    "language": "Language: ",
     "siteTitle": "Welcome!",
     "siteDescription": "This is my page which is localized.",
-    "todayDate": "Today is {$INTERPOLATION}.",
+    "todayDate": "Today is {$INTERPOLATION}",
     "logoAlt": "My site's logo",
+    "itemCount": "{VAR_PLURAL, plural, =0 {No items} =1 {One item} other {{INTERPOLATION} items}}",
+    "itemCountClear": "Increment",
+    "itemCountIncrement": "Clear",
     "customMessage": "This is a message coming from the component itself!"
   }
 }

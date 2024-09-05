@@ -1,10 +1,14 @@
 {
   "locale": "bg-BG",
   "translations": {
+    "language": "Език: ",
     "siteTitle": "Добре дошли!",
     "siteDescription": "Това е локализирана страница.",
     "todayDate": "Днес е {$INTERPOLATION}",
     "logoAlt": "Това е моето лого",
+    "itemCount": "{VAR_PLURAL, plural, =0 {Няма елементи} =1 {Един елемент} other {{INTERPOLATION} елемента}}",
+    "itemCountClear": "Добави елемент",
+    "itemCountIncrement": "Изчисти",
     "customMessage": "Това съобщение идва от компонента!"
   }
 }
