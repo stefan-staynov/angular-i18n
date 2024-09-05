@@ -25,27 +25,25 @@ export const appConfig: ApplicationConfig = {
 
 function initializeAppFactory(): () => Promise<void> {
   return async () => {
-    const localConfig = await getLocalConfig(locale);
+    const localConfig = await getLocaleConfig(locale);
 
     if (!localConfig) {
       return;
     }
 
-    const localeMessages = await fetch(localConfig.url).then(r => r.json());
-
-    loadTranslations(localeMessages.translations);
+    loadTranslations(localConfig.translations);
     $localize.locale = locale;
-    registerLocaleData(localConfig.module);
+    registerLocaleData(localConfig.locale);
   }
 }
 
-async function getLocalConfig(locale: string) {
+async function getLocaleConfig(locale: string) {
   switch (locale) {
     case 'bg':
       return {
-        locale: 'bg',
-        url: '/locale/messages.bg.json',
-        module: (await import('../../node_modules/@angular/common/locales/bg')).default,
+        code: 'bg',
+        translations: (await import('../../public/locale/messages.bg.json')).translations,
+        locale: (await import('../../node_modules/@angular/common/locales/bg')).default,
       };
     default:
       return null;
